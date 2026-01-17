@@ -1,0 +1,208 @@
+.App {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  background: radial-gradient(circle at top, #1d1f3b 0%, #0d0e1a 55%, #050509 100%);
+  color: #f5f6ff;
+  overflow: hidden;
+}
+
+.atmosphere {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+}
+
+.orb {
+  position: absolute;
+  border-radius: 50%;
+  opacity: 0.5;
+  filter: blur(80px);
+}
+
+.orb-one {
+  width: 320px;
+  height: 320px;
+  top: -120px;
+  right: -60px;
+  background: #ff8ff2;
+}
+
+.orb-two {
+  width: 260px;
+  height: 260px;
+  bottom: -80px;
+  left: -40px;
+  background: #6ef1ff;
+}
+
+.hero {
+  position: relative;
+  z-index: 1;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2rem;
+  padding: 3rem clamp(1rem, 4vw, 4rem) 2rem;
+  align-items: stretch;
+}
+
+.hero-text {
+  flex: 2;
+  min-width: 260px;
+}
+
+.eyebrow {
+  letter-spacing: 0.2em;
+  font-size: 0.85rem;
+  color: #92ffe1;
+  margin-bottom: 0.75rem;
+}
+
+.hero h1 {
+  font-size: clamp(2.2rem, 5vw, 3.5rem);
+  margin-bottom: 0.75rem;
+  letter-spacing: -0.02em;
+}
+
+.hero-tagline {
+  font-size: 1.1rem;
+  color: #d7dbff;
+  line-height: 1.6;
+  max-width: 560px;
+}
+
+.hero-pills {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+  margin-top: 1.5rem;
+}
+
+.hero-pills span {
+  padding: 0.45rem 0.95rem;
+  border-radius: 999px;
+  background: rgba(255, 255, 255, 0.12);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  font-size: 0.9rem;
+}
+
+.hero-card {
+  flex: 1;
+  min-width: 240px;
+  backdrop-filter: blur(16px);
+  background: rgba(15, 19, 45, 0.65);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 24px;
+  padding: 1.75rem;
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.35);
+}
+
+.card-label {
+  color: #8ddfff;
+  font-size: 0.85rem;
+  text-transform: uppercase;
+  letter-spacing: 0.14em;
+}
+
+.hero-card h2 {
+  margin: 0.75rem 0;
+  font-size: 1.6rem;
+}
+
+.card-copy {
+  color: #c6cae2;
+  line-height: 1.5;
+  font-size: 0.95rem;
+}
+
+.card-stats {
+  margin-top: 1.5rem;
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 1rem;
+}
+
+.stat-value {
+  font-weight: 600;
+  font-size: 1.1rem;
+}
+
+.stat-label {
+  display: block;
+  font-size: 0.85rem;
+  color: #a3a8c7;
+}
+
+.workspace {
+  position: relative;
+  z-index: 1;
+  background: rgba(9, 10, 21, 0.85);
+  border-radius: 28px 28px 0 0;
+  margin-top: 1rem;
+  padding-bottom: 3rem;
+  box-shadow: 0 -10px 60px rgba(0, 0, 0, 0.4);
+}
+
+.tabs {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  padding: 2rem 1rem 0.5rem;
+}
+
+.tab {
+  padding: 0.85rem 2.2rem;
+  border-radius: 999px;
+  border: 1px solid rgba(255, 255, 255, 0.25);
+  background: transparent;
+  color: #f1f2ff;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.tab:hover {
+  border-color: #8bd9ff;
+  color: #8bd9ff;
+}
+
+.tab.active {
+  background: linear-gradient(120deg, #77f2ff, #a977ff);
+  color: #080b1c;
+  border-color: transparent;
+  box-shadow: 0 12px 25px rgba(119, 242, 255, 0.3);
+}
+
+.content {
+  padding: 2rem clamp(1rem, 4vw, 3rem);
+}
+
+.App-footer {
+  margin-top: auto;
+  padding: 1.5rem;
+  text-align: center;
+  color: #cfd1f2;
+  font-size: 0.9rem;
+  opacity: 0.9;
+}
+
+@media (max-width: 900px) {
+  .hero {
+    flex-direction: column;
+    padding-top: 2.5rem;
+  }
+
+  .tabs {
+    flex-direction: column;
+  }
+
+  .tab {
+    width: 100%;
+  }
+
+  .workspace {
+    border-radius: 24px 24px 0 0;
+  }
+}
